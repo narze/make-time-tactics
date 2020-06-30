@@ -13,6 +13,8 @@ exports[`renders homepage unchanged 1`] = `
     <p
       className="description"
     >
+      Randomize your tactics.
+      <br />
       <button
         className="button"
         onClick={[Function]}
@@ -23,6 +25,13 @@ exports[`renders homepage unchanged 1`] = `
     <div
       className="grid"
     />
+    <p>
+      <a
+        href="https://maketimebook.com"
+      >
+        About "Make Time" Book
+      </a>
+    </p>
   </main>
 </div>
 `;

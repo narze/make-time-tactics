@@ -27,6 +27,14 @@ test('renders random button', () => {
   expect(button).toBeInTheDocument()
 })
 
+test('renders link button', () => {
+  const { getByText } = render(<Index />)
+  const button = getByText(
+    'About "Make Time" Book'
+  )
+  expect(button).toBeInTheDocument()
+})
+
 test('clicks button to show results', () => {
   render(<Index />)
 
