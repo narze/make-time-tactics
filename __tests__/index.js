@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom'
 import React from 'react'
 import { render, fireEvent, screen } from '@testing-library/react'
-import Index from '../index'
+import Index from '../pages/index'
 
 beforeEach(() => {
   jest.spyOn(global.Math, 'random').mockReturnValue(0.0)
