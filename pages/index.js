@@ -5,12 +5,18 @@ import { data } from './_data'
 
 const Home = () => {
   const [highlightTactic, setHighlightTactic] = useState(null)
+  const [laserTactic, setLaserTactic] = useState(null)
+  const [energizeTactic, setEnergizeTactic] = useState(null)
 
   const randomTactics = () => {
-    const highlights = data.highlight
+    const { highlights, lasers, energizes } = data
     const highlightResult = highlights[Math.floor(Math.random() * highlights.length)]
+    const laserResult = lasers[Math.floor(Math.random() * lasers.length)]
+    const energizeResult = energizes[Math.floor(Math.random() * energizes.length)]
 
     setHighlightTactic(highlightResult)
+    setLaserTactic(laserResult)
+    setEnergizeTactic(energizeResult)
   }
 
   return (
@@ -31,6 +37,14 @@ const Home = () => {
 
         { highlightTactic &&
           <div>Highlight : #{highlightTactic.number} - {highlightTactic.tactic}</div>
+        }
+
+        { laserTactic &&
+          <div>Laser : #{laserTactic.number} - {laserTactic.tactic}</div>
+        }
+
+        { energizeTactic &&
+          <div>Energize : #{energizeTactic.number} - {energizeTactic.tactic}</div>
         }
   {/*
         <div className={styles.grid}>
