@@ -19,9 +19,6 @@ exports[`renders homepage unchanged 1`] = `
         Random!
       </button>
     </p>
-    <div>
-      Highlight : 
-    </div>
   </main>
 </div>
 `;

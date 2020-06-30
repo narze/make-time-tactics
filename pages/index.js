@@ -1,12 +1,16 @@
 import Head from 'next/head'
 import styles from './index.module.css'
 import { useState } from 'react'
+import { data } from './_data'
 
 const Home = () => {
   const [highlightTactic, setHighlightTactic] = useState(null)
 
   const randomTactics = () => {
-    setHighlightTactic("Write It Down")
+    const highlights = data.highlight
+    const highlightResult = highlights[Math.floor(Math.random() * highlights.length)]
+
+    setHighlightTactic(highlightResult)
   }
 
   return (
@@ -25,7 +29,9 @@ const Home = () => {
           <button onClick={randomTactics}>Random!</button>
         </p>
 
-        <div>Highlight : {highlightTactic}</div>
+        { highlightTactic &&
+          <div>Highlight : #{highlightTactic.number} - {highlightTactic.tactic}</div>
+        }
   {/*
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>

@@ -2,6 +2,15 @@ import '@testing-library/jest-dom'
 import React from 'react'
 import { render, fireEvent, screen } from '@testing-library/react'
 import Index from '../index'
+import { data } from '../_data'
+
+beforeEach(() => {
+  jest.spyOn(global.Math, 'random').mockReturnValue(0.0)
+});
+
+afterEach(() => {
+  global.Math.random.mockRestore()
+})
 
 test('renders title', () => {
   const { getByText } = render(<Index />)
@@ -19,12 +28,13 @@ test('renders random button', () => {
   expect(button).toBeInTheDocument()
 })
 
-test('clicks button to show box with message', () => {
+test('clicks button to show result', () => {
   render(<Index />)
 
-  expect(screen.queryByText(/Write It Down/)).toBeNull()
+  const expectedHighlight = data.highlight[0].tactic
+  expect(screen.queryByText(RegExp(expectedHighlight))).toBeNull()
 
   fireEvent.click(screen.getByText(/Random!/))
 
-  expect(screen.getByText(/Write It Down/)).toBeInTheDocument()
+  expect(screen.getByText(RegExp(expectedHighlight))).toBeInTheDocument()
 })
