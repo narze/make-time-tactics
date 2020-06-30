@@ -4,19 +4,19 @@ import styles from './index.module.css'
 const Home = () => (
   <div className={styles.container}>
     <Head>
-      <title>Create Next App</title>
+      <title>Make Time Tactics</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
     <main>
       <h1 className={styles.title}>
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
+        Make Time Tactics
       </h1>
 
       <p className={styles.description}>
-        Get started by editing <code>pages/index.js</code>
+        <button>Random!</button>
       </p>
-
+{/*
       <div className={styles.grid}>
         <a href="https://nextjs.org/docs" className={styles.card}>
           <h3>Documentation &rarr;</h3>
@@ -40,7 +40,7 @@ const Home = () => (
           <h3>Deploy &rarr;</h3>
           <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
         </a>
-      </div>
+      </div> */}
     </main>
   </div>
 )

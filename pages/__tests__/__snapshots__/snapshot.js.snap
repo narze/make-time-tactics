@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+<div
+  className="container"
+>
+  <main>
+    <h1
+      className="title"
+    >
+      Make Time Tactics
+    </h1>
+    <p
+      className="description"
+    >
+      <button>
+        Random!
+      </button>
+    </p>
+  </main>
+</div>
+`;
