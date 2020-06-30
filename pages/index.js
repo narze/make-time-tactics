@@ -32,20 +32,34 @@ const Home = () => {
         </h1>
 
         <p className={styles.description}>
-          <button onClick={randomTactics}>Random!</button>
+          <button className={styles.button} onClick={randomTactics}>Random!</button>
         </p>
 
-        { highlightTactic &&
-          <div>Highlight : #{highlightTactic.number} - {highlightTactic.tactic}</div>
-        }
+        <div className={styles.grid}>
+          { highlightTactic &&
+            <div className={styles.card}>
+              <h3>Highlight</h3>
+              <p>#{highlightTactic.number}</p>
+              <p>{highlightTactic.tactic}</p>
+            </div>
+          }
 
-        { laserTactic &&
-          <div>Laser : #{laserTactic.number} - {laserTactic.tactic}</div>
-        }
+          { laserTactic &&
+            <div className={styles.card}>
+              <h3>Laser</h3>
+              <p>#{laserTactic.number}</p>
+              <p>{laserTactic.tactic}</p>
+            </div>
+          }
 
-        { energizeTactic &&
-          <div>Energize : #{energizeTactic.number} - {energizeTactic.tactic}</div>
-        }
+          { energizeTactic &&
+            <div className={styles.card}>
+              <h3>Energize</h3>
+              <p>#{energizeTactic.number}</p>
+              <p>{energizeTactic.tactic}</p>
+            </div>
+          }
+        </div>
   {/*
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>

@@ -14,11 +14,15 @@ exports[`renders homepage unchanged 1`] = `
       className="description"
     >
       <button
+        className="button"
         onClick={[Function]}
       >
         Random!
       </button>
     </p>
+    <div
+      className="grid"
+    />
   </main>
 </div>
 `;
