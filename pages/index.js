@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from './index.module.css'
 import { useState } from 'react'
-import { data } from './_data'
+import { data } from '../data'
 
 const Home = () => {
   const [highlightTactic, setHighlightTactic] = useState(null)
