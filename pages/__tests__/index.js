@@ -1,5 +1,6 @@
+import '@testing-library/jest-dom'
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render, fireEvent, screen } from '@testing-library/react'
 import Index from '../index'
 
 test('renders title', () => {
@@ -16,4 +17,14 @@ test('renders random button', () => {
     /Random!/
   )
   expect(button).toBeInTheDocument()
+})
+
+test('clicks button to show box with message', () => {
+  render(<Index />)
+
+  expect(screen.queryByText(/Write It Down/)).toBeNull()
+
+  fireEvent.click(screen.getByText(/Random!/))
+
+  expect(screen.getByText(/Write It Down/)).toBeInTheDocument()
 })
