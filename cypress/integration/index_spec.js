@@ -1,6 +1,6 @@
 describe("Home", () => {
   it("visits home page", () => {
-    cy.visit("https://make-time-tactics.vercel.app")
+    cy.visit("/")
 
     cy.contains("Make Time Tactics")
 
