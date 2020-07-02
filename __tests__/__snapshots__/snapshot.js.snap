@@ -2,7 +2,7 @@
 
 exports[`renders homepage unchanged 1`] = `
 <div
-  className="container py-20"
+  className="container py-12"
 >
   <main
     className="w-4/5 bg-white"
