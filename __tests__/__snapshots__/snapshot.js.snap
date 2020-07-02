@@ -2,28 +2,29 @@
 
 exports[`renders homepage unchanged 1`] = `
 <div
-  className="container"
+  className="container py-20"
 >
-  <main>
+  <main
+    className="w-4/5 bg-white"
+  >
     <h1
-      className="title"
+      className="text-6xl font-bold	text-center"
     >
       Make Time Tactics
     </h1>
     <p
-      className="description"
+      className="description my-2"
     >
       Randomize your tactics.
-      <br />
-      <button
-        className="button"
-        onClick={[Function]}
-      >
-        Random!
-      </button>
     </p>
+    <button
+      className="btn btn-blue my-2"
+      onClick={[Function]}
+    >
+      Random!
+    </button>
     <div
-      className="grid"
+      className="flex w-full space-x-4 px-8"
     />
     <p>
       <a

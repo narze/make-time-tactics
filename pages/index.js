@@ -20,43 +20,43 @@ const Home = () => {
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container + " py-20"}>
       <Head>
         <title>Make Time Tactics</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1 className={styles.title}>
+      <main className="w-4/5 bg-white">
+        <h1 className="text-6xl font-bold	text-center">
           Make Time Tactics
         </h1>
 
-        <p className={styles.description}>
+        <p className={styles.description + " my-2"}>
           Randomize your tactics.
-          <br />
-          <button className={styles.button} onClick={randomTactics}>Random!</button>
         </p>
 
-        <div className={styles.grid}>
+        <button className="btn btn-blue my-2" onClick={randomTactics}>Random!</button>
+
+        <div className="flex w-full space-x-4 px-8">
           { highlightTactic &&
-            <div className={styles.card}>
-              <h3>Highlight</h3>
+            <div className="w-1/3 my-8 p-4 border border-gray-700 rounded">
+              <h2 className="text-xl font-bold">Highlight</h2>
               <p>#{highlightTactic.number}</p>
               <p>{highlightTactic.tactic}</p>
             </div>
           }
 
           { laserTactic &&
-            <div className={styles.card}>
-              <h3>Laser</h3>
+            <div className="w-1/3 my-8 p-4 border border-gray-700 rounded">
+              <h2 className="text-xl font-bold">Laser</h2>
               <p>#{laserTactic.number}</p>
               <p>{laserTactic.tactic}</p>
             </div>
           }
 
           { energizeTactic &&
-            <div className={styles.card}>
-              <h3>Energize</h3>
+            <div className="w-1/3 my-8 p-4 border border-gray-700 rounded">
+              <h2 className="text-xl font-bold">Energize</h2>
               <p>#{energizeTactic.number}</p>
               <p>{energizeTactic.tactic}</p>
             </div>
