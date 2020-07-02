@@ -2,7 +2,7 @@
 
 exports[`renders homepage unchanged 1`] = `
 <div
-  className="container py-12"
+  className="container"
 >
   <main
     className="w-4/5 bg-white"
@@ -13,7 +13,7 @@ exports[`renders homepage unchanged 1`] = `
       Make Time Tactics
     </h1>
     <p
-      className="description my-2"
+      className="description"
     >
       Randomize your tactics.
     </p>
@@ -56,9 +56,20 @@ exports[`renders homepage unchanged 1`] = `
     </div>
     <p>
       <a
+        className="text-blue-500"
         href="https://maketimebook.com"
+        target="_blank"
       >
         About "Make Time" Book
+      </a>
+    </p>
+    <p>
+      <a
+        className="text-blue-500"
+        href="https://github.com/narze/make-time-tactics"
+        target="_blank"
+      >
+        Fork on Github
       </a>
     </p>
   </main>
