@@ -20,7 +20,7 @@ const Home = () => {
   }
 
   return (
-    <div className={styles.container + " py-20"}>
+    <div className={styles.container + " py-12"}>
       <Head>
         <title>Make Time Tactics</title>
         <link rel="icon" href="/favicon.ico" />
