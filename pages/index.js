@@ -38,29 +38,35 @@ const Home = () => {
         <button className="btn btn-blue my-2" onClick={randomTactics}>Random!</button>
 
         <div className="flex w-full space-x-4 px-8">
-          { highlightTactic &&
             <div className="w-1/3 my-8 p-4 border border-gray-700 rounded">
-              <h2 className="text-xl font-bold">Highlight</h2>
-              <p>#{highlightTactic.number}</p>
-              <p>{highlightTactic.tactic}</p>
+              <h2 className="text-center text-xl font-bold">Highlight</h2>
+              { highlightTactic &&
+                <>
+                  <p className="text-sm">#{highlightTactic.number}</p>
+                  <p>{highlightTactic.tactic}</p>
+                </>
+              }
             </div>
-          }
 
-          { laserTactic &&
             <div className="w-1/3 my-8 p-4 border border-gray-700 rounded">
-              <h2 className="text-xl font-bold">Laser</h2>
-              <p>#{laserTactic.number}</p>
-              <p>{laserTactic.tactic}</p>
+              <h2 className="text-center text-xl font-bold">Laser</h2>
+              { laserTactic &&
+                <>
+                  <p className="text-sm">#{laserTactic.number}</p>
+                  <p>{laserTactic.tactic}</p>
+                </>
+              }
             </div>
-          }
 
-          { energizeTactic &&
             <div className="w-1/3 my-8 p-4 border border-gray-700 rounded">
-              <h2 className="text-xl font-bold">Energize</h2>
-              <p>#{energizeTactic.number}</p>
-              <p>{energizeTactic.tactic}</p>
+              <h2 className="text-center text-xl font-bold">Energize</h2>
+              { energizeTactic &&
+                <>
+                  <p className="text-sm">#{energizeTactic.number}</p>
+                  <p>{energizeTactic.tactic}</p>
+                </>
+              }
             </div>
-          }
         </div>
 
         <p>
