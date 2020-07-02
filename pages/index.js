@@ -20,7 +20,7 @@ const Home = () => {
   }
 
   return (
-    <div className={styles.container + " py-12"}>
+    <div className={styles.container}>
       <Head>
         <title>Make Time Tactics</title>
         <link rel="icon" href="/favicon.ico" />
@@ -31,7 +31,7 @@ const Home = () => {
           Make Time Tactics
         </h1>
 
-        <p className={styles.description + " my-2"}>
+        <p className={styles.description}>
           Randomize your tactics.
         </p>
 
@@ -70,7 +70,10 @@ const Home = () => {
         </div>
 
         <p>
-          <a href="https://maketimebook.com">About "Make Time" Book</a>
+          <a href="https://maketimebook.com" target="_blank" className="text-blue-500">About "Make Time" Book</a>
+        </p>
+        <p>
+          <a href="https://github.com/narze/make-time-tactics" target="_blank" className="text-blue-500">Fork on Github</a>
         </p>
       </main>
     </div>

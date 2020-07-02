@@ -1,6 +1,6 @@
 .container {
+  @apply py-12;
   min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,6 +27,7 @@
 
 .title,
 .description {
+  @apply my-2;
   text-align: center;
 }
 
