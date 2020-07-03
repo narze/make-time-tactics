@@ -37,7 +37,7 @@ const Home = () => {
 
         <button className="btn btn-blue my-2" onClick={randomTactics}>Random!</button>
 
-        <div className="flex w-full space-x-4 px-8">
+        <div className="flex w-full space-x-4 px-8 h-48">
             <div className="w-1/3 my-8 p-4 border border-gray-700 rounded">
               <h2 className="text-center text-xl font-bold">Highlight</h2>
               { highlightTactic &&
